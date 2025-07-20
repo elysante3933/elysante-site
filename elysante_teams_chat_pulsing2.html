@@ -1,0 +1,42 @@
+elysante_teams_chat_pulsing.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Now</title>
+  <style>
+    .pulse-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: navy;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+      animation: pulse 2s infinite;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="pulse-button" onclick="window.open('https://teams.microsoft.com/l/chat/0/0?users=elysanteoffice@elysante.com', '_blank')">
+    💬 Chat now
+  </button>
+</body>
+</html>
