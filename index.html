@@ -1,4 +1,4 @@
-Teljes index.html frissítés: Zoho chat + pulzáló gomb + új dizájn
+index.html új verzió – végleges Zoho chat + dizájn
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +11,16 @@ Teljes index.html frissítés: Zoho chat + pulzáló gomb + új dizájn
       background-color: #fdfcf9;
       color: #1a1a1a;
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px;
+    }
+    .update-message {
+      font-size: 0.95em;
+      color: #888;
+      margin-bottom: 2em;
     }
     h1 {
       font-size: 3em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
     }
     p {
       font-size: 1.2em;
@@ -31,14 +36,6 @@ Teljes index.html frissítés: Zoho chat + pulzáló gomb + új dizájn
       font-size: 0.9em;
       color: #888;
     }
-  </style>
-  <!-- Zoho SalesIQ Chat -->
-  <script>
-    window.$zoho=window.$zoho || {};
-    $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
-  </script>
-  <script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq20f6e7e25ea2d612b54e3b368a508bfa32c375eb620094013de2b193e62e9e69" defer></script>
-  <style>
     .pulse-button {
       position: fixed;
       bottom: 20px;
@@ -65,15 +62,26 @@ Teljes index.html frissítés: Zoho chat + pulzáló gomb + új dizájn
       }
     }
   </style>
+
+  <!-- Zoho SalesIQ Chat -->
+  <script>
+    window.$zoho = window.$zoho || {};
+    $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
+  </script>
+  <script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq20f6e7e25ea2d612b54e3b368a508bfa32c375eb620094013de2b193e62e9e69" defer></script>
 </head>
+
 <body>
+  <div class="update-message">Teljes index.html frissítés: Zoho chat + pulzáló gomb + új dizájn</div>
   <h1>Elysanté</h1>
   <p>Where discretion meets timeless elegance. Discover our exclusive, private services tailored to refined gentlemen of distinction.</p>
   <div class="quote">"Elegance is not about being noticed, it's about being remembered."</div>
-  <button class="pulse-button">Chat Now</button>
   <footer>&copy; 2025 Elysanté. All rights reserved.</footer>
+
+  <button class="pulse-button">Chat Now</button>
 </body>
 </html>
+
 
 
 
