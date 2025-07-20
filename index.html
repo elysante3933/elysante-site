@@ -11,6 +11,7 @@
       color: #1a1a1a;
       text-align: center;
       padding: 50px;
+      margin: 0;
     }
     h1 {
       font-size: 3em;
@@ -33,45 +34,54 @@
     .pulse-button {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      left: 20px; /* BAL alsó sarokban van! */
       padding: 14px 28px;
       font-size: 16px;
-      background-color: navy;
+      background-color: #444dc9; /* Teams lila */
       color: white;
       border: none;
       border-radius: 50px;
       cursor: pointer;
       animation: pulse 2s infinite;
-      box-shadow: 0 0 0 rgba(0, 0, 128, 0.7);
+      box-shadow: 0 0 0 rgba(68, 77, 201, 0.7);
+      z-index: 1000;
     }
     @keyframes pulse {
       0% {
-        box-shadow: 0 0 0 0 rgba(0, 0, 128, 0.7);
+        box-shadow: 0 0 0 0 rgba(68, 77, 201, 0.7);
       }
       70% {
-        box-shadow: 0 0 0 15px rgba(0, 0, 128, 0);
+        box-shadow: 0 0 0 15px rgba(68, 77, 201, 0);
       }
       100% {
-        box-shadow: 0 0 0 0 rgba(0, 0, 128, 0);
+        box-shadow: 0 0 0 0 rgba(68, 77, 201, 0);
       }
     }
   </style>
-
-  <!-- Zoho SalesIQ Chat -->
-  <script>
-    window.$zoho=window.$zoho || {};
-    $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
-  </script>
-  <script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq20f6e7e25ea2d612b54e3b368a508bfa32c375eb620094013de2b193e62e9e69" defer></script>
 </head>
 <body>
   <h1>Elysanté</h1>
   <p>Where discretion meets timeless elegance. Discover our exclusive, private services tailored to refined gentlemen of distinction.</p>
   <div class="quote">"Elegance is not about being noticed, it's about being remembered."</div>
   <footer>&copy; 2025 Elysanté. All rights reserved.</footer>
-  <button class="pulse-button">Chat Now</button>
+
+  <!-- Pulzáló Teams gomb -->
+  <button class="pulse-button" onclick="openTeamsChat()">Chat with us</button>
+
+  <script>
+    function openTeamsChat() {
+      // IDE jön majd a Teams chat nyitó kód
+      alert("Ez nyitná meg a Microsoft Teams chatet – ide illesztjük be a végső kódot.");
+    }
+  </script>
+
+  <!-- IDE kell majd beilleszteni a hivatalos Teams kódot -->
+  <!-- Példa (ez csak illusztráció): -->
+  <!-- <script src="https://example.teams.microsoft.com/widget.js"></script> -->
+
 </body>
 </html>
+
 
 
 
