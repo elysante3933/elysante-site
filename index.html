@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Elysanté Hub - Exclusive gateway to elegance, discretion and timeless services." />
+  <meta name="description" content="Elysanté Hub - Az elegancia, diszkréció és időtlen szolgáltatások exkluzív kapuja." />
   <meta property="og:title" content="Elysanté Hub" />
-  <meta property="og:description" content="Step into refined elegance and private access to Elysanté services." />
+  <meta property="og:description" content="Lépj be a kifinomult elegancia világába, és férj hozzá az Elysanté privát szolgáltatásaihoz." />
   <meta property="og:image" content="https://elysante.com/og-image.jpg" />
   <meta property="og:url" content="https://elysante.com" />
   <link rel="icon" href="https://elysante.com/favicon.ico" />
@@ -97,109 +97,110 @@
 </head>
 <body>
   <script>
-    const accessCode = prompt("Please enter your access code:");
+    const accessCode = prompt("Kérjük, add meg a belépési kódot:");
+
     if (accessCode === "ely2025" || accessCode === "vip2025") {
       window.sessionStorage.setItem("vipAuth", accessCode);
     } else {
-      document.body.innerHTML = "<h2 style='font-family: Georgia, serif; text-align: center;'>Access Denied</h2><p style='font-family: Georgia, serif; text-align: center;'>Incorrect code. Please try again later.</p>";
+      document.body.innerHTML = "<h2 style='font-family: Georgia, serif; text-align: center;'>Hozzáférés megtagadva</h2><p style='font-family: Georgia, serif; text-align: center;'>Helytelen kód. Kérlek próbáld meg újra később.</p>";
     }
   </script>
+
   <header>
     <div><strong>Elysanté</strong></div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <a href="#about">Rólunk</a>
+      <a href="#services">Szolgáltatások</a>
       <a href="#vip">VIP</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Kapcsolat</a>
     </nav>
   </header>
+
   <section class="hero">
     <h1>Elysanté Hub</h1>
-    <p>Welcome to the private gateway of timeless elegance. Access exclusive services, discreet channels, and curated experiences tailored for true gentlemen of distinction.</p>
-    <a class="button" href="https://elysante.com">Enter Main Site</a>
+    <p>Üdvözöljük a kifinomult elegancia és diszkréció világában. Exkluzív szolgáltatások és személyre szabott élmények különleges vendégeknek.</p>
+    <a class="button" href="https://elysante.com">Belépés a főoldalra</a>
   </section>
+
   <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Elysanté is where timeless elegance meets modern discretion. We serve discerning clients who value privacy, luxury, and refined service above all else.</p>
-    <img src="https://elysante.com/img/about.jpg" alt="Elegant Lounge" />
+    <h2>Rólunk</h2>
+    <p>Az Elysanté azoknak szól, akik értik az időtlen elegancia és modern diszkréció jelentőségét. Vendégeink olyan úriemberek, akik a minőséget, a nyugalmat és az egyediséget keresik.</p>
+    <img src="https://elysante.com/img/about.jpg" alt="Elegáns szalon" />
   </section>
+
   <section id="services" class="section">
-    <h2>Our Services</h2>
-    <p>From curated experiences to personalized encounters, Elysanté offers a suite of exclusive services designed to elevate your private lifestyle.</p>
-    <img src="https://elysante.com/img/services.jpg" alt="Private Service" />
+    <h2>Szolgáltatásaink</h2>
+    <p>Privát élmények és kifinomult kényeztetés – egyedi rituálék, amelyek valóban csak Önnek szólnak.</p>
+    <img src="https://elysante.com/img/services.jpg" alt="Privát szolgáltatás" />
   </section>
+
   <section id="vip" class="section" style="display: none;">
     <script>
       if (window.sessionStorage.getItem("vipAuth") === "vip2025") {
         document.currentScript.parentElement.style.display = "block";
       }
     </script>
-    <h2>VIP Access</h2>
-    <p><strong>Private Weekend Escape</strong> – Refined Indulgence for the Modern Gentleman</p>
-    <p><strong>Velvet Voyage</strong> – The Travelling Indulgence</p>
-    <p><strong>The Whispering Touch</strong> – For Solitary Aesthetes</p>
-    <p><strong>Dual Tranquility</strong> – For Couples in Quiet Escape</p>
-    <p><strong>L'Art du Silence</strong> – Where Sensuality Meets Intellect</p>
-    <p><strong>Privileged Indulgence</strong> – Discreet Enhancement Option</p>
+    <h2>VIP Élmények</h2>
+    <h3>Üzleti Úriembereknek – Az elegancia természetes kísérője</h3>
+    <p><strong>"Gentlemen's Reset" kezelés</strong><br>
+    💶 Ár / Price: 41.600 HUF / 100 EUR</p>
+    <ul style="list-style: disc; text-align: left; max-width: 600px; margin: 1rem auto;">
+      <li>60 perces célzott nyak-, váll- és hátmasszázs</li>
+      <li>Koffeines-mentás bőrstimuláció</li>
+      <li>Illóolajos levezetés, frissítő szemmaszk</li>
+    </ul>
+
+    <h3>For Cultured Experience Seekers – Where Sensuality Meets Intellect</h3>
+    <p><strong>"L'Art du Silence" Experience</strong><br>
+    💶 Ár / Price: 52.650 HUF / €130</p>
+    <ul style="list-style: disc; text-align: left; max-width: 600px; margin: 1rem auto;">
+      <li>75 perces lassú ritmusú nyirokmasszázs klasszikus zenével</li>
+      <li>Aromaterápia nerolival és levendulával</li>
+      <li>Meleg gyógynövényes borogatás hátra és nyakra</li>
+      <li>Gyertyafényes hangulat, mandarin-gyömbér teaceremónia</li>
+    </ul>
+
     <div class="section">
-      <h3>Payment Information</h3>
-      <p>Elysanté experiences require advance booking and a deposit, which may be completed via the following methods:</p>
+      <h3>Fizetési Információk</h3>
+      <p>Az Elysanté élmények előzetes időpontfoglalást és foglalót igényelnek, amely az alábbi módokon teljesíthető:</p>
       <ul style="list-style: disc; text-align: left; max-width: 600px; margin: 1rem auto;">
-        <li>Bank transfer</li>
-        <li>Wise or Revolut</li>
-        <li>Cash payment upon personal arrangement</li>
+        <li>Banki átutalás</li>
+        <li>Wise vagy Revolut</li>
+        <li>Készpénzes fizetés előzetes egyeztetés alapján</li>
       </ul>
-      <p><strong>❌ Credit card payments are not accepted at this time.<br />💱 Accepted currencies: EUR, HUF, USD</strong></p>
-      <p>Detailed payment instructions are provided during your private consultation, ensuring discretion and clarity in every step.</p>
+      <p><strong>❌ Bankkártyás fizetés jelenleg nem lehetséges.<br />💱 Elfogadott valuták: EUR, HUF, USD</strong></p>
+      <p>Részletes utasításokat privát konzultáció során biztosítunk – diszkréten és egyértelműen.</p>
     </div>
-    <a class="button" href="#" onclick="reenterCode()">Request VIP Entry</a>
+
+    <a class="button" href="#" onclick="reenterCode()">VIP belépési kód újra megadása</a>
   </section>
+
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>For discreet inquiries or membership access, please use the live chat or send us a private message.</p>
+    <h2>Kapcsolat</h2>
+    <p>Privát megkeresésekhez vagy tagsági hozzáféréshez kérjük, használja az élő chatet vagy küldjön üzenetet.</p>
     <div id="qr">
-      <p style="margin-top: 2rem;">Scan or download your private access QR code:</p>
+      <p style="margin-top: 2rem;">Személyes hozzáférési QR-kód beolvasása vagy letöltése:</p>
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://elysante.com" alt="Elysanté QR Code" />
-      <br><a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://elysante.com" download class="button" style="margin-top: 1rem;">Download QR Code</a>
+      <br><a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://elysante.com" download class="button" style="margin-top: 1rem;">QR kód letöltése</a>
     </div>
   </section>
-  <footer>&copy; 2025 Elysanté. All rights reserved.</footer>
+
+  <footer>&copy; 2025 Elysanté. Minden jog fenntartva.</footer>
+
   <script>
     function reenterCode() {
-      const newCode = prompt("Re-enter VIP code to confirm access:");
+      const newCode = prompt("VIP kód újra megadása:");
       if (newCode === "vip2025") {
         window.sessionStorage.setItem("vipAuth", "vip2025");
         location.reload();
       } else {
-        alert("Incorrect VIP code.");
+        alert("Helytelen VIP kód.");
       }
     }
   </script>
-  <script>
-    window.$zoho=window.$zoho || {};
-    $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
-  </script>
-  <script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq20f6e7e25ea2d612b54e3b368a508bfa32c375eb620094013de2b193e62e9e69" defer></script>
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/687d75867f202b19181f012f/1j0l165ad';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-    Tawk_API.onLoad = function(){
-      var iframe = document.querySelector("iframe[title='chat widget']");
-      if (iframe) {
-        iframe.style.right = 'auto';
-        iframe.style.left = '20px';
-      }
-    };
-  </script>
 </body>
 </html>
+
 
 
 
