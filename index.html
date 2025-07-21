@@ -2,43 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elysanté – Exclusive Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Elysanté Hub - Exclusive gateway to elegance, discretion and timeless services." />
+  <meta property="og:title" content="Elysanté Hub" />
+  <meta property="og:description" content="Step into refined elegance and private access to Elysanté services." />
+  <meta property="og:image" content="https://elysante.com/og-image.jpg" />
+  <meta property="og:url" content="https://elysante.com" />
+  <link rel="icon" href="https://elysante.com/favicon.ico" />
+  <title>Elysanté Hub</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fdfcf9;
+      background-color: #f7f5f2;
       color: #1a1a1a;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .hero {
       text-align: center;
-      padding: 50px;
+      padding: 4rem 1rem 2rem;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 0 auto;
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 90%;
+      margin: 0 auto 2rem auto;
     }
-    .quote {
-      font-style: italic;
-      margin-top: 2em;
+    .section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    a.button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-top: 2rem;
+    }
+    a.button:hover {
+      background-color: #3d3d3d;
     }
     footer {
-      margin-top: 4em;
-      font-size: 0.9em;
-      color: #888;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Elysanté</h1>
-  <p>Where discretion meets timeless elegance. Discover our exclusive, private services tailored to refined gentlemen of distinction.</p>
-  <div class="quote">"Elegance is not about being noticed, it's about being remembered."</div>
+  <script>
+    const password = "ely2025";
+    const input = prompt("Please enter the access password:");
+    if (input !== password) {
+      document.body.innerHTML = "<h2 style='font-family: Georgia, serif; text-align: center;'>Access Denied</h2><p style='font-family: Georgia, serif; text-align: center;'>Incorrect password. Please try again later.</p>";
+    }
+  </script>
+
+  <header>
+    <div><strong>Elysanté</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Elysanté Hub</h1>
+    <p>Welcome to the private gateway of timeless elegance. Access exclusive services, discreet channels, and curated experiences tailored for true gentlemen of distinction.</p>
+    <a class="button" href="https://elysante.com">Enter Main Site</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Elysanté is where timeless elegance meets modern discretion. We serve discerning clients who value privacy, luxury, and refined service above all else.</p>
+    <img src="https://elysante.com/img/about.jpg" alt="Elegant Lounge" />
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <p>From curated experiences to personalized encounters, Elysanté offers a suite of exclusive services designed to elevate your private lifestyle.</p>
+    <img src="https://elysante.com/img/services.jpg" alt="Private Service" />
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>For discreet inquiries or membership access, please use the live chat or send us a private message.</p>
+    <div id="qr">
+      <p style="margin-top: 2rem;">Scan or download your private access QR code:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://elysante.com" alt="Elysanté QR Code" />
+      <br><a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://elysante.com" download class="button" style="margin-top: 1rem;">Download QR Code</a>
+    </div>
+  </section>
+
   <footer>&copy; 2025 Elysanté. All rights reserved.</footer>
 
-  <!-- ZOHO SALES IQ CHAT (jobb alsó sarok) -->
+  <!-- ZOHO CHAT (jobb alsó sarok) -->
   <script>
     window.$zoho=window.$zoho || {};
     $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
@@ -56,7 +161,6 @@
       s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
     })();
-    // Áthelyezés bal alsó sarokba
     Tawk_API.onLoad = function(){
       var iframe = document.querySelector("iframe[title='chat widget']");
       if (iframe) {
@@ -67,6 +171,7 @@
   </script>
 </body>
 </html>
+
 
 
 
