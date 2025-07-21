@@ -97,17 +97,13 @@
 </head>
 <body>
   <script>
-    const entryCode = "ely2025";
-    const vipCode = "vip2025";
-    const userCode = prompt("Please enter your access code:");
-
-    if (userCode === entryCode || userCode === vipCode) {
-      console.log("Access granted");
+    const accessCode = prompt("Please enter your access code:");
+    if (accessCode === "ely2025" || accessCode === "vip2025") {
+      window.sessionStorage.setItem("vipAuth", accessCode);
     } else {
       document.body.innerHTML = "<h2 style='font-family: Georgia, serif; text-align: center;'>Access Denied</h2><p style='font-family: Georgia, serif; text-align: center;'>Incorrect code. Please try again later.</p>";
     }
   </script>
-
   <header>
     <div><strong>Elysanté</strong></div>
     <nav>
@@ -117,33 +113,34 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <section class="hero">
     <h1>Elysanté Hub</h1>
     <p>Welcome to the private gateway of timeless elegance. Access exclusive services, discreet channels, and curated experiences tailored for true gentlemen of distinction.</p>
     <a class="button" href="https://elysante.com">Enter Main Site</a>
   </section>
-
   <section id="about" class="section">
     <h2>About Us</h2>
     <p>Elysanté is where timeless elegance meets modern discretion. We serve discerning clients who value privacy, luxury, and refined service above all else.</p>
     <img src="https://elysante.com/img/about.jpg" alt="Elegant Lounge" />
   </section>
-
   <section id="services" class="section">
     <h2>Our Services</h2>
     <p>From curated experiences to personalized encounters, Elysanté offers a suite of exclusive services designed to elevate your private lifestyle.</p>
     <img src="https://elysante.com/img/services.jpg" alt="Private Service" />
   </section>
-
-  <section id="vip" class="section">
+  <section id="vip" class="section" style="display: none;">
+    <script>
+      if (window.sessionStorage.getItem("vipAuth") === "vip2025") {
+        document.currentScript.parentElement.style.display = "block";
+      }
+    </script>
     <h2>VIP Access</h2>
-    <p><em>Budapest Élmény – A Kényeztetés Csendes Művészete</em></p>
-    <p>A város szíve zakatol, de egy ajtó mögött minden elcsendesedik. Itt a kényeztetés nem kérkedés – hanem egyfajta szelíd, időtlen gondoskodás. Ahol a mozdulatok nemcsak érintenek, hanem gyógyítanak. Ahol a test ellazul, és a lélek is enged.</p>
-    <p>Ez Budapest egyik legdiszkrétebb, mégis legnemesebb szeglete. Nem szalon – hanem szentély. Nem vendég – hanem méltó látogató vagy. Itt nem választasz a luxus és a bensőségesség között – mert mindkettő természetes része az élménynek.</p>
-    <p>Masszázsaink finoman hangolt rituálék: selyem, illatok, fények és figyelem. Nem sietünk. Nem szólunk fölöslegesen. Csak adunk – és jelen vagyunk.</p>
-    <p><strong>Mert aki tudja, mit keres, annak elég egyetlen pillanat.</strong></p>
-
+    <p><strong>Private Weekend Escape</strong> – Refined Indulgence for the Modern Gentleman</p>
+    <p><strong>Velvet Voyage</strong> – The Travelling Indulgence</p>
+    <p><strong>The Whispering Touch</strong> – For Solitary Aesthetes</p>
+    <p><strong>Dual Tranquility</strong> – For Couples in Quiet Escape</p>
+    <p><strong>L'Art du Silence</strong> – Where Sensuality Meets Intellect</p>
+    <p><strong>Privileged Indulgence</strong> – Discreet Enhancement Option</p>
     <div class="section">
       <h3>Payment Information</h3>
       <p>Elysanté experiences require advance booking and a deposit, which may be completed via the following methods:</p>
@@ -155,10 +152,8 @@
       <p><strong>❌ Credit card payments are not accepted at this time.<br />💱 Accepted currencies: EUR, HUF, USD</strong></p>
       <p>Detailed payment instructions are provided during your private consultation, ensuring discretion and clarity in every step.</p>
     </div>
-
-    <a class="button" href="#">Request VIP Entry</a>
+    <a class="button" href="#" onclick="reenterCode()">Request VIP Entry</a>
   </section>
-
   <section id="contact" class="section">
     <h2>Contact</h2>
     <p>For discreet inquiries or membership access, please use the live chat or send us a private message.</p>
@@ -168,17 +163,23 @@
       <br><a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://elysante.com" download class="button" style="margin-top: 1rem;">Download QR Code</a>
     </div>
   </section>
-
   <footer>&copy; 2025 Elysanté. All rights reserved.</footer>
-
-  <!-- ZOHO CHAT (jobb alsó sarok) -->
+  <script>
+    function reenterCode() {
+      const newCode = prompt("Re-enter VIP code to confirm access:");
+      if (newCode === "vip2025") {
+        window.sessionStorage.setItem("vipAuth", "vip2025");
+        location.reload();
+      } else {
+        alert("Incorrect VIP code.");
+      }
+    }
+  </script>
   <script>
     window.$zoho=window.$zoho || {};
     $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
   </script>
   <script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq20f6e7e25ea2d612b54e3b368a508bfa32c375eb620094013de2b193e62e9e69" defer></script>
-
-  <!-- TAWK.TO CHAT (bal alsó sarok) -->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -199,6 +200,22 @@
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
