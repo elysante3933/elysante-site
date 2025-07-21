@@ -97,9 +97,13 @@
 </head>
 <body>
   <script>
-    const password = "vip2025";
-    const input = prompt("Please enter the VIP access code:");
-    if (input !== password) {
+    const entryCode = "ely2025";
+    const vipCode = "vip2025";
+    const userCode = prompt("Please enter your access code:");
+
+    if (userCode === entryCode || userCode === vipCode) {
+      console.log("Access granted");
+    } else {
       document.body.innerHTML = "<h2 style='font-family: Georgia, serif; text-align: center;'>Access Denied</h2><p style='font-family: Georgia, serif; text-align: center;'>Incorrect code. Please try again later.</p>";
     }
   </script>
@@ -195,6 +199,7 @@
   </script>
 </body>
 </html>
+
 
 
 
