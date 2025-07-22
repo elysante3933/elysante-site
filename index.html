@@ -1,72 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elysanté – Exclusive Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elysanté - Privát Élmények</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fdfcf9;
-      color: #1a1a1a;
+      background-color: #2f003a;
+      color: #f5e6dc;
+    }
+    header {
+      background-color: #2f003a;
+      padding: 100px 20px;
       text-align: center;
-      padding: 50px;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
+    header img {
+      width: 150px;
     }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 0 auto;
+    header h1 {
+      font-size: 3rem;
+      color: gold;
+      margin-top: 20px;
     }
-    .quote {
-      font-style: italic;
-      margin-top: 2em;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #3e004f;
+      padding: 15px 0;
+    }
+    nav a {
+      color: #f5e6dc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: gold;
+      font-size: 2rem;
     }
     footer {
-      margin-top: 4em;
-      font-size: 0.9em;
-      color: #888;
+      background-color: #2f003a;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      color: #d1bfb0;
     }
   </style>
 </head>
 <body>
-  <h1>Elysanté</h1>
-  <p>Where discretion meets timeless elegance. Discover our exclusive, private services tailored to refined gentlemen of distinction.</p>
-  <div class="quote">"Elegance is not about being noticed, it's about being remembered."</div>
-  <footer>&copy; 2025 Elysanté. All rights reserved.</footer>
 
-  <!-- ZOHO SALES IQ CHAT (jobb alsó sarok) -->
-  <script>
-    window.$zoho=window.$zoho || {};
-    $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
-  </script>
-  <script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq20f6e7e25ea2d612b54e3b368a508bfa32c375eb620094013de2b193e62e9e69" defer></script>
+  <header>
+    <img src="elysante-logo.png" alt="Elysanté logó">
+    <h1>ELYSANTÉ</h1>
+    <p style="color:#d9c1a5">V.I.P. Privát Élmények</p>
+  </header>
 
-  <!-- TAWK.TO CHAT (bal alsó sarok) -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/687d75867f202b19181f012f/1j0l165ad';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-    // Áthelyezés bal alsó sarokba
-    Tawk_API.onLoad = function(){
-      var iframe = document.querySelector("iframe[title='chat widget']");
-      if (iframe) {
-        iframe.style.right = 'auto';
-        iframe.style.left = '20px';
-      }
-    };
-  </script>
+  <nav>
+    <a href="#rolunk">Rólunk</a>
+    <a href="#szolgaltatasok">Szolgáltatások</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+    <a href="#chat">Élő Chat</a>
+  </nav>
+
+  <section id="rolunk">
+    <h2>Rólunk</h2>
+    <p>Az Elysanté a diszkrét luxus, a meghittség és az exkluzív kiszolgálás világa. Egyedülálló élményt nyújtunk azoknak, akik tudják, hogy mit érdemelnek – és nem elérik be kevesebbel.</p>
+  </section>
+
+  <section id="szolgaltatasok">
+    <h2>Szolgáltatásaink</h2>
+    <ul>
+      <li>Privát élményprogramok</li>
+      <li>Páros harmónia rituálék</li>
+      <li>VIP kísérőszolgálat</li>
+      <li>Érzéki relax szolgáltatások</li>
+    </ul>
+  </section>
+
+  <section id="kapcsolat">
+    <h2>Kapcsolat</h2>
+    <p>Email: elysanteoffice@elysante.com</p>
+    <p>Telefonszám: +36 70 ...</p>
+  </section>
+
+  <section id="chat">
+    <h2>Élő Chat</h2>
+    <p>Kattintson az alsó sarokban megjelenő buborékra, hogy privát üzenetet küldjön nekünk.</p>
+    <!-- Ide érkezik majd a beágyazott Elysanté Chat modul -->
+  </section>
+
+  <footer>
+    &copy; 2025 Elysanté. Minden jog fenntartva.
+  </footer>
+
 </body>
 </html>
+
 
 
 
