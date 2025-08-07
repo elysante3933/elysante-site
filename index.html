@@ -2,14 +2,14 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elysanté</title>
   <style>
     body {
       margin: 0;
       font-family: "Georgia", serif;
-      background-color: #f5f0e6; /* világos bézs */
-      color: #000; /* fekete szöveg */
+      background-color: #fff;
+      color: #000;
     }
 
     header {
@@ -18,7 +18,7 @@
       text-align: center;
       font-size: 2em;
       letter-spacing: 1px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #000;
     }
 
     nav {
@@ -26,7 +26,7 @@
       justify-content: center;
       gap: 30px;
       padding: 15px;
-      background-color: #f3e7db;
+      background-color: #f0f0f0;
       font-weight: bold;
     }
 
@@ -41,58 +41,6 @@
       margin: 0 auto;
       line-height: 1.6;
     }
-
-    .chat-bubble {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      background-color: #d9c9b3;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-
-    #chat-left { bottom: 30px; left: 30px; }
-    #chat-right { bottom: 30px; right: 30px; }
-
-    .chat-box {
-      display: none;
-      position: fixed;
-      bottom: 100px;
-      right: 30px;
-      width: 300px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      padding: 15px;
-      z-index: 1000;
-    }
-
-    .chat-box input, .chat-box textarea {
-      width: 100%;
-      margin-top: 10px;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: inherit;
-    }
-
-    .chat-box button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      background-color: #d9c9b3;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
@@ -105,30 +53,21 @@
 
   <div class="content">
     <h2 id="rolunk">Bemutatkozás</h2>
-    <p>Ez egy minta oldal az Elysanté privát világához. A szövegek és képek az egyes vendégtípusokhoz igazodva kerülnek majd beillesztésre.</p>
+    <p>Ez egy minta oldal az Elysanté privát világához. A szövegek és képek az egyes vendégtípusokhoz igazodva kerülnek be.</p>
   </div>
 
-  <!-- Chat ikonok -->
-  <div class="chat-bubble" id="chat-left" title="Élő chat">💬</div>
-  <div class="chat-bubble" id="chat-right" title="Élő chat">💬</div>
-
-  <!-- Chat panel -->
-  <div class="chat-box" id="chatBox">
-    <strong>Üdvözöljük az Elysanté Privát Csevegőben</strong>
-    <p>Hogy szólíthatjuk Önt, és milyen e-mail címre küldhetünk információt?</p>
-    <input type="text" placeholder="Név">
-    <input type="email" placeholder="E-mail">
-    <textarea rows="3" placeholder="Üzenet..."></textarea>
-    <button>Küldés</button>
-  </div>
-
-  <script>
-    const bubbles = document.querySelectorAll('.chat-bubble');
-    const chatBox = document.getElementById('chatBox');
-
-    bubbles.forEach(b => b.addEventListener('click', () => {
-      chatBox.style.display = chatBox.style.display === 'block' ? 'none' : 'block';
-    }));
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/687d75867f202b19181f012f/1j0l165ad';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
   </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>
