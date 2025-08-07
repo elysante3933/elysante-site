@@ -3,110 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elysanté – Privát Élmények</title>
+  <title>Elysanté</title>
   <style>
     body {
       margin: 0;
       font-family: "Georgia", serif;
-      background-color: #000000;
-      color: white;
+      background-color: #fef3f0; /* bézses színvilág */
+      color: #222;
     }
+
     header {
-      background-color: #1a1a1a;
+      background-color: #fff;
       padding: 20px;
       text-align: center;
+      font-size: 2em;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #ddd;
     }
+
     nav {
       display: flex;
       justify-content: center;
-      background-color: #2c2c2c;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
+      gap: 30px;
+      padding: 15px;
+      background-color: #f9e8e3;
       font-weight: bold;
     }
-    section {
-      padding: 40px;
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+    }
+
+    .content {
+      padding: 30px;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
+      line-height: 1.6;
     }
-    h1, h2 {
-      color: #ffffff;
-    }
-    .chat-widget {
+
+    /* Chat buborék */
+    .chat-bubble {
       position: fixed;
       width: 60px;
       height: 60px;
-      background-color: #4b0082;
-      color: white;
+      background-color: #f8c8b4; /* bézses pink árnyalat */
       border-radius: 50%;
-      bottom: 20px;
-      font-size: 24px;
-      line-height: 60px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
       cursor: pointer;
-      z-index: 999;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
-    #chat-left {
-      left: 20px;
+
+    #chat-left { bottom: 30px; left: 30px; }
+    #chat-right { bottom: 30px; right: 30px; }
+
+    .chat-box {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 300px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      padding: 15px;
+      z-index: 1000;
     }
-    #chat-right {
-      right: 20px;
+
+    .chat-box input, .chat-box textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
     }
-    img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 20px 0;
+
+    .chat-box button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #f8c8b4;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Elysanté – Privát Élmények Diszkrét Vendégeknek</h1>
-  </header>
+  <header>Elysanté</header>
   <nav>
-    <a href="#bemutatkozas">Bemutatkozás</a>
-    <a href="#kiknek-nem">Nem Ajánlott</a>
-    <a href="#programok">Élményprogramok</a>
+    <a href="#rolunk">Rólunk</a>
+    <a href="#szolgaltatasok">Szolgáltatások</a>
     <a href="#kapcsolat">Kapcsolat</a>
   </nav>
-  <section id="bemutatkozas">
-    <h2>BEMUTATKOZÁS</h2>
-    <p>Vannak, akik számára a valódi kényelem ott kezdődik, ahol ők maguk otthon vannak – egy elegáns hotelszoba, egy csendes lakás, egy penthouse a város felett. Az Elysanté diszkréten megérkezik Önhöz, oda, ahol minden az Ön ritmusában történik. Ez a látogatás nem csupán egy program, hanem egy személyre szabott gesztus – az igazi figyelem és diszkréció jegyében.</p>
-    <img src="/mnt/data/red-bull-2384130_1280.webp" alt="Privát házhoz érkezés – taxi vintage autó">
-  </section>
-  <section id="kiknek-nem">
-    <h2>KINEK NEM AJÁNLOM AZ ELYSANTÉ SZALONT</h2>
-    <p>Az Elysanté nem mindenki számára való. Ez a tér azoknak szól, akik értik a diszkréció jelentését, tisztelik a másik idejét, és a figyelmet nem követelik, hanem viszonozzák.</p>
-    <ul>
-      <li>❌ Aki nem tud viselkedni kulturáltan</li>
-      <li>❌ Aki "Szia", "Hali", vagy egyetlen emoji formájában kezdeményez kapcsolatot</li>
-      <li>❌ Aki az élményt szolgáltatásként kezeli, nem találkozásként</li>
-      <li>❌ Aki nem fogadja el, hogy ez nem futószalag, hanem exkluzív tér</li>
-      <li>❌ Aki nem vállalja magát (fénykép, életkor, elérhetőség nélkül)</li>
-    </ul>
-  </section>
-  <section id="programok">
-    <h2>Velvet Voyage – Utazó Élményprogram</h2>
-    <p>A program célja, hogy a vendég saját környezetében, megszokott aurájában élvezhesse a finom érzéki kényeztetést. Egy teljes körű ellazító kezelés, amelyben ötvöződik a selymes érintés, az aromák nyugtató ereje, és a figyelmes jelenlét művészete.</p>
-    <ul>
-      <li>60 perces teljes testmasszázs (levendula & rózsaolajjal)</li>
-      <li>Személyre szabott illatpermet a helyiségben</li>
-      <li>Halk zenei hangulat Bluetooth-hangszórón</li>
-      <li>Welcome tea vagy gyümölcslé kínálás</li>
-      <li>Finom kézápolás a kezelés végén</li>
-      <li>Személyes, csendes lezárás az esti nyugalomra</li>
-    </ul>
-  </section>
-  <section id="kapcsolat">
-    <h2>Kapcsolat</h2>
-    <p>E-mail: <a href="mailto:elysanteoffice@elysante.com" style="color:#fff; text-decoration:underline;">elysanteoffice@elysante.com</a></p>
-  </section>
 
-  <div id="chat-left" class="chat-widget" title="Élő Chat bal sarokban">💬</div>
-  <div id="chat-right" class="chat-widget" title="Élő Chat jobb sarokban">💬</div>
+  <div class="content">
+    <h2 id="rolunk">Bemutatkozás</h2>
+    <p>Ez egy minta oldal az Elysanté privát világához. A szövegek és képek az egyes vendégtípusokhoz igazodva kerülnek majd beillesztésre.</p>
+  </div>
+
+  <!-- Chat ikonok -->
+  <div class="chat-bubble" id="chat-left" title="Élő chat">💬</div>
+  <div class="chat-bubble" id="chat-right" title="Élő chat">💬</div>
+
+  <!-- Chat panel -->
+  <div class="chat-box" id="chatBox">
+    <strong>Üdvözöljük az Elysanté Privát Csevegőben</strong>
+    <p>Hogy szólíthatjuk Önt, és milyen e-mail címre küldhetünk információt?</p>
+    <input type="text" placeholder="Név">
+    <input type="email" placeholder="E-mail">
+    <textarea rows="3" placeholder="Üzenet..."></textarea>
+    <button>Küldés</button>
+  </div>
+
+  <script>
+    const bubbles = document.querySelectorAll('.chat-bubble');
+    const chatBox = document.getElementById('chatBox');
+
+    bubbles.forEach(b => b.addEventListener('click', () => {
+      chatBox.style.display = chatBox.style.display === 'block' ? 'none' : 'block';
+    }));
+  </script>
 </body>
 </html>
